@@ -1,0 +1,300 @@
+/* Βασικό στυλ για τη σελίδα */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto;
+    width: 400px; 
+    padding:20px
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #f1f1f1;
+}
+
+button {
+    display: block;
+    width: 80%;
+    max-width: 250px;
+    padding: 12px 20px;
+    margin: 10px auto;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+    color: #fff;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+/*Κουμπία Σωστά και Λάθος*/
+.right{
+    background: linear-gradient(135deg, #2bff00 0%, #08811c 100%);
+}
+.right:hover{
+    background: linear-gradient(135deg, #08af24 0%, #2bff00 100%);
+}
+
+.wrong{
+    background: linear-gradient(135deg, #c40101 0%, #ff4949 100%);
+}
+.wrong:hover{
+    background: linear-gradient(135deg, #ff4949 0%, #c40101 100%);
+}
+/**/
+
+.question-button {
+    background: linear-gradient(135deg, #005a05 0%, #00c2b8 100%);
+    color: #fff;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide question buttons initially */
+#question-section .question-button {
+    display: none;
+}
+
+
+#question-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#answer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#answer {
+    width: calc(100% - 40px);
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    color: #333;
+    font-size: 16px;
+}
+
+#answer-box {
+    display: none;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#answer-box.correct {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#answer-box.incorrect {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Στυλ για το πεδίο σκορ */
+#score-section {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#score-section:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#score {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+.player {
+    color: #ffd700;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Στυλ για το πεδίο εισαγωγής ονομάτων */
+#name-section {
+    margin-bottom: 20px;
+}
+
+#name-section input {
+    width: calc(100% - 40px);
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#name-section input:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#name-section input:focus {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Στυλ για το πεδίο ένδειξης σειράς */
+#turn-indicator {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#turn-indicator h2 {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Πρόσθετες μεταβάσεις και κινούμενα σχέδια */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container, h1, h2, button, #answer-section, #score-section {
+    animation: fadeIn 1s ease;
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-content {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+#popup-content h2 {
+    margin: 0 0 10px;
+    color:#c40101
+}
+
+#popup-content p {
+    margin: 0 0 20px;
+    color:black
+}
+
+  /* Στυλ για το πλαίσιο των κουμπιών μουσικής */
+  #music-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 300px; 
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Εμφάνιση των κουμπιών όταν προστίθεται η κλάση show */
+#music-controls.show {
+    opacity: 1;
+}
+
+/* Στυλ για τα κουμπιά */
+#music-controls button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#music-controls button:hover {
+    background-color: #0056b3;
+}

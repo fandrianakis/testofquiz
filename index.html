@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizball</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="logo-container">
+            <img id="logo" src="images/quizzball-logo.png" alt="Quizball Logo">
+        </div>        
+        <!-- Πλαίσιο για τα κουμπιά μουσικής -->
+    <div id="music-controls">
+        <button id="play-pause-btn" onclick="togglePlayPause()">Start Music</button>
+        <button onclick="volumeUp()">Vol+</button>
+        <button onclick="volumeDown()">Vol-</button>
+    </div>
+
+    <!-- Στοιχείο <audio> για την αναπαραγωγή μουσικής -->
+    <audio id="background-music" loop>
+        <source src="sounds/fifa22.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="correct-sound">
+            <source src="sounds/correct.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="incorrect-sound">
+            <source src="sounds/incorrect.mp3" type="audio/mpeg">
+        </audio>
+    <!--musin end-->
+        <div id="name-section">
+            <input type="text" id="player1-name" placeholder="Όνομα Παίκτη 1">
+            <input type="text" id="player2-name" placeholder="Όνομα Παίκτη 2">
+            <button onclick="submitNames()">Υποβολή Ονομάτων</button>
+        </div>
+        <div id="game-section" style="display:none;">
+            <div id="score-section">
+                <p>Σκορ:<br></br> <span id="score"><span class="player" id="player1-display">Παίκτης 1:</span> 0 <span class="player player2" id="player2-display">Παίκτης 2:</span> 0</span></p>
+            </div>
+            <div id="turn-indicator">
+                <h2>Η σειρά του παίκτη: <span id="current-player">Παίκτης 1</span></h2>
+            </div>
+            <div id="category-section">
+                <h2>Επιλέξτε Κατηγορία:</h2>
+                <button onclick="loadCategory('History')">Ιστορία</button>
+                <button onclick="loadCategory('Geography')">Γεωγραφία</button>
+                <button onclick="loadCategory('playerID')">Player ID</button>
+                <button onclick="loadCategory('GuessTheFinal')">Guess The Final</button>
+                <button onclick="loadCategory('Logo')">Logo Quiz</button>
+                <button onclick="loadCategory('PlayerNumber')">Player Number</button>
+            </div>
+            <div id="question-section">
+                <h2 id="category-title"></h2>
+                <button id="easy-button" class="question-button" onclick="loadQuestion('easy')">Ερώτηση x1</button>
+                <button id="medium-button" class="question-button" onclick="loadQuestion('medium')">Ερώτηση x2</button>
+                <button id="hard-button" class="question-button" onclick="loadQuestion('hard')">Ερώτηση x3</button>
+            </div>
+            <div id="answer-section" style="display:none;">
+                <p id="question"></p>
+                <img id="question-image" src="" alt="Question Image" style="display:none;">
+                <input type="text" id="answer" placeholder="Εισάγετε την απάντηση">
+                <button onclick="submitAnswer()">Δες την απάντηση</button>
+            </div>
+            <div id="answer-box" style="display:none;">
+                <p id="correct-answer"></p>
+                <button class="right" onclick="confirmAnswer(true)">Σωστά</button>
+                <button class="wrong" onclick="confirmAnswer(false)">Λάθος</button>
+            </div>
+        </div>
+        <div id="popup" style="display:none;">
+            <div id="popup-content">
+                <h2 id="winner-message"></h2>
+                <p id="final-score"></p>
+                <button onclick="closePopup()">Κλείσιμο</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
